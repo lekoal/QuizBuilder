@@ -1,6 +1,7 @@
 package com.private_projects.quizbuilder.data
 
 import com.private_projects.quizbuilder.data.database.LocalDataBase
+import com.private_projects.quizbuilder.data.entities.AnswerEntity
 import com.private_projects.quizbuilder.data.entities.QuizEntity
 import com.private_projects.quizbuilder.data.entities.SelectQuestionEntity
 import com.private_projects.quizbuilder.data.entities.SubscribeEntity
@@ -139,5 +140,29 @@ class LocalRepositoryImpl(localDataBase: LocalDataBase) : LocalRepository {
         selectQuestionDao.deleteSelectQuestion(question)
     }
 
+    //AnswerEntity
+    private val answerDao = localDataBase.answerDao()
+    override suspend fun getAllAnswers(): List<AnswerEntity> {
+        return answerDao.getAllAnswers()
+    }
 
+    override suspend fun getAnswerById(id: Long): AnswerEntity {
+        return answerDao.getAnswerById(id)
+    }
+
+    override suspend fun getAnswersByQuestion(questionId: Long): List<AnswerEntity> {
+        return answerDao.getAnswersByQuestion(questionId)
+    }
+
+    override suspend fun insertAnswer(answer: AnswerEntity) {
+        answerDao.insertAnswer(answer)
+    }
+
+    override suspend fun updateAnswer(answer: AnswerEntity) {
+        answerDao.updateAnswer(answer)
+    }
+
+    override suspend fun deleteAnswer(answer: AnswerEntity) {
+        answerDao.deleteAnswer(answer)
+    }
 }

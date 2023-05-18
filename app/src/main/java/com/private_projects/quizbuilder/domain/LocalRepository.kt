@@ -1,5 +1,6 @@
 package com.private_projects.quizbuilder.domain
 
+import com.private_projects.quizbuilder.data.entities.AnswerEntity
 import com.private_projects.quizbuilder.data.entities.QuizEntity
 import com.private_projects.quizbuilder.data.entities.SelectQuestionEntity
 import com.private_projects.quizbuilder.data.entities.SubscribeEntity
@@ -46,4 +47,12 @@ interface LocalRepository {
     suspend fun insertSelectQuestion(question: SelectQuestionEntity)
     suspend fun updateSelectQuestion(question: SelectQuestionEntity)
     suspend fun deleteSelectQuestion(question: SelectQuestionEntity)
+
+    //AnswerEntity
+    suspend fun getAllAnswers(): List<AnswerEntity>
+    suspend fun getAnswerById(id: Long): AnswerEntity
+    suspend fun getAnswersByQuestion(questionId: Long): List<AnswerEntity>
+    suspend fun insertAnswer(answer: AnswerEntity)
+    suspend fun updateAnswer(answer: AnswerEntity)
+    suspend fun deleteAnswer(answer: AnswerEntity)
 }

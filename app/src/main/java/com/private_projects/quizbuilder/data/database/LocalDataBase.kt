@@ -5,6 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.private_projects.quizbuilder.data.dao.AnswerDao
 import com.private_projects.quizbuilder.data.dao.QuizDao
 import com.private_projects.quizbuilder.data.dao.SelectQuestionDao
 import com.private_projects.quizbuilder.data.dao.SubscribeDao
@@ -47,6 +48,7 @@ abstract class LocalDataBase : RoomDatabase() {
     abstract fun subscribeDao(): SubscribeDao
     abstract fun textQuestionDao(): TextQuestionDao
     abstract fun selectQuestionDao(): SelectQuestionDao
+    abstract fun answerDao(): AnswerDao
 
     companion object {
         private var instance: LocalDataBase? = null
