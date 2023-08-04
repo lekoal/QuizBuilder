@@ -16,7 +16,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.private_projects.quizbuilder.utils.ClearRippleTheme
@@ -28,7 +27,7 @@ fun CommonBottomBar() {
         LocalRippleTheme provides ClearRippleTheme
     ) {
         NavigationBar(
-            containerColor = MaterialTheme.colorScheme.primaryContainer
+            containerColor = MaterialTheme.colorScheme.primary
         ) {
             var selectedItemPosition by remember {
                 mutableStateOf(0)
@@ -41,8 +40,8 @@ fun CommonBottomBar() {
                     modifier = Modifier
                         .background(
                             color = if (selectedItemPosition == index)
-                                MaterialTheme.colorScheme.onPrimaryContainer
-                            else MaterialTheme.colorScheme.primaryContainer
+                                MaterialTheme.colorScheme.onPrimary
+                            else MaterialTheme.colorScheme.primary
                         ),
                     selected = selectedItemPosition == index,
                     onClick = { selectedItemPosition = index },
@@ -59,11 +58,11 @@ fun CommonBottomBar() {
                     colors = NavigationBarItemDefaults.colors(
                         selectedIconColor = MaterialTheme.colorScheme.primary,
                         selectedTextColor = MaterialTheme.colorScheme.primary,
-                        unselectedIconColor = MaterialTheme.colorScheme.secondary,
-                        unselectedTextColor = MaterialTheme.colorScheme.secondary,
+                        unselectedIconColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedTextColor = MaterialTheme.colorScheme.onPrimary,
                         indicatorColor = if (selectedItemPosition == index)
-                            MaterialTheme.colorScheme.onPrimaryContainer
-                        else MaterialTheme.colorScheme.primaryContainer
+                            MaterialTheme.colorScheme.onPrimary
+                        else MaterialTheme.colorScheme.primary
                     )
                 )
             }
