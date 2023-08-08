@@ -1,4 +1,4 @@
-package com.private_projects.quizbuilder.ui.main
+package com.private_projects.quizbuilder.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Bookmarks
@@ -9,20 +9,24 @@ import com.private_projects.quizbuilder.R
 
 sealed class NavigationItem(
     val titleId: Int,
-    val icon: ImageVector
+    val icon: ImageVector,
+    val description: String?
 ) {
     data object Home: NavigationItem(
         titleId = R.string.main_screen_title,
-        icon = Icons.Rounded.Home
+        icon = Icons.Rounded.Home,
+        description = null
     )
 
     data object Subscribes: NavigationItem(
         titleId = R.string.subscribes_screen_title,
-        icon = Icons.Rounded.Bookmarks
+        icon = Icons.Rounded.Bookmarks,
+        description = null
     )
 
     data object Builder: NavigationItem(
         titleId = R.string.builder_screen_title,
-        icon = Icons.Rounded.Construction
+        icon = Icons.Rounded.Construction,
+        description = null
     )
 }
