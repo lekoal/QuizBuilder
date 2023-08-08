@@ -3,4 +3,6 @@
     <string name="main_screen_title">Главная</string>
     <string name="subscribes_screen_title">Подписки</string>
     <string name="builder_screen_title">Создание</string>
+    <string name="back_press_title">Назад</string>
+    <string name="back_press_exit_title">Выход</string>
 </resources>

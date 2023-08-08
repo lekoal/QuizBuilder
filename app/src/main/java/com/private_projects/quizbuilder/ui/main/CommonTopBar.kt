@@ -1,5 +1,6 @@
 package com.private_projects.quizbuilder.ui.main
 
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Colorize
@@ -20,6 +21,7 @@ import androidx.compose.ui.unit.dp
 fun CommonTopBar(title: String) {
     val iconSize = 24.dp
     TopAppBar(
+        windowInsets = WindowInsets(0, 0, 0, 0),
         modifier = Modifier,
         title = {
             Text(

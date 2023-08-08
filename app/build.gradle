@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.private_projects.quizbuilder'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.private_projects.quizbuilder"
         minSdk 28
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -67,4 +67,7 @@ dependencies {
 
     //Больше иконок
     implementation "androidx.compose.material:material-icons-extended:1.4.3"
+
+    //Цвета системных панелей
+    implementation "com.google.accompanist:accompanist-systemuicontroller:0.31.6-rc"
 }
