@@ -1,4 +1,4 @@
-package com.private_projects.quizbuilder.ui.statistics
+package com.private_projects.quizbuilder.ui.quizzes
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,8 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 
 @Composable
-fun StatisticsScreen() {
+fun QuizScreen() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(text = "Statistics Screen", color = Color.Black)
+        Text(text = "Quizzes Screen", color = Color.Black)
     }
 }
