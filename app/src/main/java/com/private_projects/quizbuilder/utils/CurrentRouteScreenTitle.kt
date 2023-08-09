@@ -6,35 +6,71 @@ import com.private_projects.quizbuilder.navigation.NavigationItem
 
 class CurrentRouteScreenTitle(context: Context) {
 
-    private val homeScreenTitle = context.getString(R.string.home_screen_top_bar_title)
-    private val loginScreenTitle = context.getString(R.string.login_screen_top_bar_title)
-    private val subscribesScreenTitle = context.getString(R.string.subscribes_screen_top_bar_title)
-    private val builderScreenTitle = context.getString(R.string.builder_screen_top_bar_title)
-    private val quizScreenTitle = context.getString(R.string.quiz_screen_top_bar_title)
-    private val gameScreenTitle = context.getString(R.string.game_screen_top_bar_title)
-    private val addQuizScreenTitle = context.getString(R.string.add_quiz_screen_top_bar_title)
+    private val homeScreenTopTitle = context.getString(R.string.home_screen_top_bar_title)
+    private val loginScreenTopTitle = context.getString(R.string.login_screen_top_bar_title)
+    private val subscribesScreenTopTitle = context.getString(R.string.subscribes_screen_top_bar_title)
+    private val builderScreenTopTitle = context.getString(R.string.builder_screen_top_bar_title)
+    private val quizScreenTopTitle = context.getString(R.string.quiz_screen_top_bar_title)
+    private val gameScreenTopTitle = context.getString(R.string.game_screen_top_bar_title)
+    private val addQuizScreenTopTitle = context.getString(R.string.add_quiz_screen_top_bar_title)
+
+    private val homeScreenBottomTitle = context.getString(R.string.home_screen_bottom_bar_title)
+    private val loginScreenBottomTitle = context.getString(R.string.login_screen_bottom_bar_title)
+    private val subscribesScreenBottomTitle = context.getString(R.string.subscribes_screen_bottom_bar_title)
+    private val builderScreenBottomTitle = context.getString(R.string.builder_screen_bottom_bar_title)
+    private val quizScreenBottomTitle = context.getString(R.string.quiz_screen_bottom_bar_title)
+    private val gameScreenBottomTitle = context.getString(R.string.game_screen_bottom_bar_title)
+    private val addQuizScreenBottomTitle = context.getString(R.string.add_quiz_screen_bottom_bar_title)
+
     fun getTop(route: String): String {
         return when (route) {
             NavigationItem.Home.route -> {
-                homeScreenTitle
+                homeScreenTopTitle
             }
             NavigationItem.Subscribes.route -> {
-                subscribesScreenTitle
+                subscribesScreenTopTitle
             }
             NavigationItem.Builder.route -> {
-                builderScreenTitle
+                builderScreenTopTitle
             }
             NavigationItem.Login.route -> {
-                loginScreenTitle
+                loginScreenTopTitle
             }
             NavigationItem.Quiz.route -> {
-                quizScreenTitle
+                quizScreenTopTitle
             }
             NavigationItem.AddQuiz.route -> {
-                addQuizScreenTitle
+                addQuizScreenTopTitle
             }
             NavigationItem.Game.route -> {
-                gameScreenTitle
+                gameScreenTopTitle
+            }
+            else -> "unidentified"
+        }
+    }
+
+    fun getBottom(route: String): String {
+        return when (route) {
+            NavigationItem.Home.route -> {
+                homeScreenBottomTitle
+            }
+            NavigationItem.Subscribes.route -> {
+                subscribesScreenBottomTitle
+            }
+            NavigationItem.Builder.route -> {
+                builderScreenBottomTitle
+            }
+            NavigationItem.Login.route -> {
+                loginScreenBottomTitle
+            }
+            NavigationItem.Quiz.route -> {
+                quizScreenBottomTitle
+            }
+            NavigationItem.AddQuiz.route -> {
+                addQuizScreenBottomTitle
+            }
+            NavigationItem.Game.route -> {
+                gameScreenBottomTitle
             }
             else -> "unidentified"
         }

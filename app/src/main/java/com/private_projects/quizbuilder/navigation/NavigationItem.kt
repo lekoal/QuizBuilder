@@ -58,12 +58,12 @@ sealed class NavigationItem(
     )
 
     private companion object {
-        private const val HOME_SCREEN_ROUTE = "Главная"
-        private const val SUBSCRIBES_SCREEN_ROUTE = "Подписки"
-        private const val BUILD_SCREEN_ROUTE = "Создать"
-        private const val LOGIN_SCREEN_ROUTE = "Вход/регистрация"
-        private const val QUIZ_SCREEN_ROUTE = "Информация"
-        private const val GAME_SCREEN_ROUTE = "Игра"
-        private const val ADD_QUIZ_SCREEN_ROUTE = "Создание квиза"
+        private const val HOME_SCREEN_ROUTE = "home_screen_route"
+        private const val SUBSCRIBES_SCREEN_ROUTE = "subscribes_screen_route"
+        private const val BUILD_SCREEN_ROUTE = "build_screen_route"
+        private const val LOGIN_SCREEN_ROUTE = "login_screen_route"
+        private const val QUIZ_SCREEN_ROUTE = "quiz_screen_route"
+        private const val GAME_SCREEN_ROUTE = "game_screen_route"
+        private const val ADD_QUIZ_SCREEN_ROUTE = "add_quiz_screen_route"
     }
 }

@@ -13,6 +13,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.private_projects.quizbuilder.navigation.NavigationItem
 import com.private_projects.quizbuilder.utils.BackPressLabelText
+import com.private_projects.quizbuilder.utils.CurrentRouteScreenTitle
 
 @Composable
 fun IconWithText(
@@ -21,6 +22,7 @@ fun IconWithText(
 ) {
     val iconSize = 24.dp
     val backPressLabelText = BackPressLabelText(LocalContext.current)
+    val title = CurrentRouteScreenTitle(LocalContext.current)
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         val currentScreen = when (currentRoute) {
             NavigationItem.Subscribes.route -> {
@@ -41,7 +43,8 @@ fun IconWithText(
             contentDescription = navigationItem?.description
         )
         Text(
-            text = navigationItem?.route ?: backPressLabelText.get(currentScreen)
+            text = if (navigationItem != null) title.getBottom(navigationItem.route)
+            else backPressLabelText.get(currentScreen)
         )
     }
 }
