@@ -1,5 +1,6 @@
 package com.private_projects.quizbuilder.navigation
 
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 
 class NavigationState(
@@ -7,7 +8,7 @@ class NavigationState(
 ) {
     fun navigateTo(route: String) {
         navHostController.navigate(route) {
-            popUpTo(navHostController.graph.startDestinationId) {//Удаление промежуточных экранов из backStack
+            popUpTo(navHostController.graph.findStartDestination().id) {//Удаление промежуточных экранов из backStack
                 saveState = true //Сохранение состояния удаляемого экрана
             }
             launchSingleTop = true //Запрет на очередное создание открытого экрана

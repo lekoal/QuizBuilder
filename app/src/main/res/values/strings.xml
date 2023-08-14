@@ -14,10 +14,13 @@
 
 <!--    Screen TopBar Titles-->
     <string name="home_screen_top_bar_title">Статистика пользователя</string>
-    <string name="login_screen_top_bar_title">Вход/регистрация</string>
+    <string name="login_screen_top_bar_title">Вход</string>
+    <string name="registration_screen_top_bar_title">Регистрация</string>
+    <string name="forgot_password_screen_top_bar_title">Восстановление пароля</string>
     <string name="subscribes_screen_top_bar_title">Мои подписки</string>
     <string name="builder_screen_top_bar_title">Создание квиза</string>
     <string name="add_quiz_screen_top_bar_title">Новый квиз</string>
     <string name="quiz_screen_top_bar_title">Данные квиза</string>
     <string name="game_screen_top_bar_title">Игра</string>
+    <string name="animated_navigation_title">AnimatedNavigation</string>
 </resources>

@@ -11,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import com.private_projects.quizbuilder.navigation.HOME_ROUTE
 import com.private_projects.quizbuilder.navigation.NavigationItem
 import com.private_projects.quizbuilder.utils.BackPressLabelText
 import com.private_projects.quizbuilder.utils.CurrentRouteScreenTitle
@@ -25,16 +26,11 @@ fun IconWithText(
     val title = CurrentRouteScreenTitle(LocalContext.current)
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         val currentScreen = when (currentRoute) {
-            NavigationItem.Subscribes.route -> {
-                1
-            }
-
-            NavigationItem.Builder.route -> {
-                2
-            }
-
-            else -> {
+            NavigationItem.Home.route, HOME_ROUTE -> {
                 0
+            }
+            else -> {
+                1
             }
         }
         Icon(

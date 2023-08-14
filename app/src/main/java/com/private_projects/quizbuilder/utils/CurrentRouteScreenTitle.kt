@@ -8,6 +8,8 @@ class CurrentRouteScreenTitle(context: Context) {
 
     private val homeScreenTopTitle = context.getString(R.string.home_screen_top_bar_title)
     private val loginScreenTopTitle = context.getString(R.string.login_screen_top_bar_title)
+    private val registrationScreenTopTitle = context.getString(R.string.registration_screen_top_bar_title)
+    private val forgotPasswordScreenTopTitle = context.getString(R.string.forgot_password_screen_top_bar_title)
     private val subscribesScreenTopTitle = context.getString(R.string.subscribes_screen_top_bar_title)
     private val builderScreenTopTitle = context.getString(R.string.builder_screen_top_bar_title)
     private val quizScreenTopTitle = context.getString(R.string.quiz_screen_top_bar_title)
@@ -44,6 +46,15 @@ class CurrentRouteScreenTitle(context: Context) {
             }
             NavigationItem.Game.route -> {
                 gameScreenTopTitle
+            }
+            NavigationItem.Login.route -> {
+                loginScreenTopTitle
+            }
+            NavigationItem.Registration.route -> {
+                registrationScreenTopTitle
+            }
+            NavigationItem.ForgotPassword.route -> {
+                forgotPasswordScreenTopTitle
             }
             else -> "unidentified"
         }

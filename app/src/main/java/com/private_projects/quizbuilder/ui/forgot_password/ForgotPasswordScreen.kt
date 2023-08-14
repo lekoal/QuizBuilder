@@ -1,4 +1,4 @@
-package com.private_projects.quizbuilder.ui.add_quiz
+package com.private_projects.quizbuilder.ui.forgot_password
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,8 +10,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavHostController
 
 @Composable
-fun AddQuizScreen(navHostController: NavHostController) {
+fun ForgotPasswordScreen(navHostController: NavHostController) {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(text = "Add quiz Screen", color = Color.Black)
+        Text(text = "Forgot Password Screen", color = Color.Black)
     }
 }
