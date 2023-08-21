@@ -34,6 +34,7 @@ class MainActivity : ComponentActivity() {
                             navHostController = navHostController,
                             paddingValues = paddingValues
                         )
+//                        navHostController.navigate(ScreenRoutes.LOGIN_SCREEN_ROUTE)
                     }
                 }
             }

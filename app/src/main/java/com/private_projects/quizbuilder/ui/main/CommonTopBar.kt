@@ -1,11 +1,7 @@
 package com.private_projects.quizbuilder.ui.main
 
 import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Colorize
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -17,16 +13,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.private_projects.quizbuilder.navigation.NavigationState
+import com.private_projects.quizbuilder.ui.menu.CommonTopBarMenu
 import com.private_projects.quizbuilder.utils.CurrentRouteScreenTitle
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CommonTopBar(navHostController: NavHostController) {
-    val iconSize = 24.dp
     val navigationState = remember {
         NavigationState(navHostController)
     }
@@ -49,11 +44,13 @@ fun CommonTopBar(navHostController: NavHostController) {
         ),
         actions = {
             IconButton(onClick = { }) {
-                Icon(
-                    modifier = Modifier.size(iconSize),
-                    imageVector = Icons.Rounded.Colorize,
-                    contentDescription = null
-                )
+                CommonTopBarMenu {
+                    if (it == "Color") {
+                        println("COLOR")
+                    } else {
+                        navHostController.navigate(it)
+                    }
+                }
             }
         }
     )

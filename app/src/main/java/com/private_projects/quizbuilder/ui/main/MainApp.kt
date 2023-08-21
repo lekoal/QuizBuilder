@@ -1,7 +1,7 @@
 package com.private_projects.quizbuilder.ui.main
 
 import android.app.Application
-import com.private_projects.quizbuilder.modules.loginStateModule
+import com.private_projects.quizbuilder.modules.loginScreenModule
 import com.private_projects.quizbuilder.modules.mainModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -14,7 +14,7 @@ class MainApp : Application() {
         startKoin {
             androidLogger()
             androidContext(this@MainApp)
-            modules(mainModule, loginStateModule)
+            modules(mainModule, loginScreenModule)
         }
     }
 }

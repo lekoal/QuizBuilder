@@ -23,4 +23,16 @@
     <string name="quiz_screen_top_bar_title">Данные квиза</string>
     <string name="game_screen_top_bar_title">Игра</string>
     <string name="animated_navigation_title">AnimatedNavigation</string>
+    <string name="login_in_quest_builder_text">Вход в QuizBuilder</string>
+    <string name="enter_user_name_text">Введите имя пользователя</string>
+    <string name="user_name_placeholder_text">Имя пользователя</string>
+    <string name="enter_user_password_text">Введите пароль</string>
+    <string name="user_password_placeholder_text">Пароль</string>
+    <string name="show_password_text">Показать пароль</string>
+    <string name="hide_password_text">Скрыть пароль</string>
+    <string name="login_button_text">Войти</string>
+    <string name="registration_button_text">Зарегистрироваться</string>
+    <string name="top_bar_menu_login_text">Войти в аккаунт</string>
+    <string name="top_bar_menu_register_text">Зарегистрироваться</string>
+    <string name="top_bar_menu_change_color_text">Поменять цвет</string>
 </resources>

@@ -38,7 +38,8 @@ fun CommonBottomBar(navHostController: NavHostController) {
         LocalRippleTheme provides ClearRippleTheme
     ) {
         if (navBackStackEntry?.destination?.hierarchy?.any {
-                it.route == NavigationItem.Login.route
+                it.route == NavigationItem.Login.route ||
+                        it.route == NavigationItem.Registration.route
             } == false
         ) {
             NavigationBar(
