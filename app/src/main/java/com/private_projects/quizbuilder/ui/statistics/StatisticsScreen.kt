@@ -20,10 +20,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.private_projects.quizbuilder.R
+import com.private_projects.quizbuilder.navigation.NavigationState
 import com.private_projects.quizbuilder.navigation.ScreenRoutes
 
 @Composable
 fun StatisticsScreen(navHostController: NavHostController) {
+    val navigationState = NavigationState(navHostController)
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column(
             modifier = Modifier
@@ -37,7 +39,7 @@ fun StatisticsScreen(navHostController: NavHostController) {
             OutlinedButton(
                 modifier = Modifier.padding(top = 8.dp),
                 onClick = {
-                    navHostController.navigate(ScreenRoutes.LOGIN_SCREEN_ROUTE)
+                    navigationState.navigateTo(ScreenRoutes.LOGIN_SCREEN_ROUTE)
                 },
                 shape = RoundedCornerShape(4.dp)
             ) {

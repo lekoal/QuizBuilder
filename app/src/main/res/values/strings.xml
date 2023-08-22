@@ -35,4 +35,6 @@
     <string name="top_bar_menu_login_text">Войти в аккаунт</string>
     <string name="top_bar_menu_register_text">Зарегистрироваться</string>
     <string name="top_bar_menu_change_color_text">Поменять цвет</string>
+    <string name="enter_user_mail_text">Введите email</string>
+    <string name="user_mail_placeholder_text">email пользователя</string>
 </resources>
